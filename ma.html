@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Tienda</title>
+	<style>
+		/* Estilo para la barra de navegación */
+		.navbar {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			transition: top 0.3s; /* Añade una transición suave */
+			z-index: 1000; /* Asegura que la navbar esté en el frente */
+		}
+		/* Asegura que el contenido no quede oculto debajo de la navbar */
+		body {
+			padding-top: 80px; /* Ajusta según la altura de la navbar */
+		}
+        img{
+            width: 80%;
+            height: 65%;
+        }
+	</style>
+	
+</head>
+<body>
+    <header>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container">
+                    <a href="#" class="navbar-brand">Tienda Omega</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                            <li class="nav-item"><a href="marco_teorico.html" class="nav-link">Marco Teorico</a></li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" id="productDropdown" data-bs-toggle="dropdown">Analisis Estructural</a>
+                                <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                                    <li><a href="ma.html" class="dropdown-item">Modelo Ambiental</a></li>
+                                    <li><a href="mc.html" class="dropdown-item">Modelo de comportamiento</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="oo.html" class="nav-link">Orientado a Objetos</a></li>
+                            <li class="nav-item"><a href="videos.html" class="nav-link">Videos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+    <section class="main">
+        <div class="row">
+            <div class="col-4">
+                <div id="list-example" class="list-group position-sticky" style="top: 8.5%;">
+                <a class="list-group-item list-group-item-action" href="#list-item-1">Declaracion de Propositos</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-2">Diagrama de Contexto</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-3">Lista de Acontecimientos</a>
+              </div>
+            </div>
+            <div class="col-8">
+              <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                <h4 id="list-item-1">Declaracion de Propositos</h4>
+                Desarrollar una plataforma para la venta de computadoras y accesorios que permita a los clientes realizar compras. Además de ayudar a la empresa a registrar y controlar inventarios, procesar pagos electrónicos, coordinar envíos con servicios de mensajería y generar reportes de ventas.
+                <h4 id="list-item-2">Diagrama de Contexto</h4>
+                <img src="img/diagrama_contexto.jpg">
+                <h4 id="list-item-3">Lista de Acontecimientos</h4>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">• Crear cuenta</li>
+                    <li class="list-group-item">• Ingresar cuenta</li>
+                    <li class="list-group-item">• Seleccionar productos</li>
+                    <li class="list-group-item">• Ingresar cupon</li>
+                    <li class="list-group-item">• Realizar pago</li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+    </section>
+    <footer class="bg-dark text-light py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Tienda Omega. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">Acerca de</a>
+                    <a href="#" class="text-light">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		let lastScrollTop = 0;
+		const navbar = document.querySelector('.navbar');
+	
+		window.addEventListener('scroll', function() {
+			const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	
+			if (scrollTop > lastScrollTop) {
+				// Oculta la barra de navegación al hacer scroll hacia abajo
+				navbar.style.top = '-80px'; // Ajusta este valor según la altura de la navbar
+			} else {
+				// Muestra la barra de navegación al hacer scroll hacia arriba
+				navbar.style.top = '0';
+			}
+	
+			lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para evitar valores negativos en el scroll
+		});
+	</script>
+	
+</body>
+</html>

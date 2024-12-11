@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Tienda</title>
+	<style>
+		/* Estilo para la barra de navegación */
+		.navbar {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			transition: top 0.3s; /* Añade una transición suave */
+			z-index: 1000; /* Asegura que la navbar esté en el frente */
+		}
+		/* Asegura que el contenido no quede oculto debajo de la navbar */
+		body {
+			padding-top: 80px; /* Ajusta según la altura de la navbar */
+		}
+        h1, h2, h3 {
+            color: #940000;
+        }
+        h1 {
+            text-align: center;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        #navbar-example3 {
+    max-height: 100vh; /* Evita que sobrepase la pantalla */
+    overflow-y: auto; /* Permite desplazamiento si el contenido del menú es extenso */
+}
+	</style>
+	
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a href="#" class="navbar-brand">Tienda Omega</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="marco_teorico.html" class="nav-link">Marco Teorico</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="productDropdown" data-bs-toggle="dropdown">Analisis Estructural</a>
+                            <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                                <li><a href="ma.html" class="dropdown-item">Modelo Ambiental</a></li>
+                                <li><a href="mc.html" class="dropdown-item">Modelo de comportamiento</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="oo.html" class="nav-link">Orientado a Objetos</a></li>
+                        <li class="nav-item"><a href="videos.html" class="nav-link">Videos</a></li>
+                        <!--
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="productDropdown" data-bs-toggle="dropdown">Productos</a>
+                            <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                                <li><a href="productos.html" class="dropdown-item">Computadoras</a></li>
+                                <li><a href="productos.html" class="dropdown-item">Laptops</a></li>
+                                <li><a href="productos.html" class="dropdown-item">Smartphones</a></li>
+                                <li><a href="productos.html" class="dropdown-item">Drones</a></li>
+                                <li><a href="productos.html" class="dropdown-item">Accesorios</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="productDropdown" data-bs-toggle="dropdown">contenido</a>
+                            <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                                <li><a href="#" class="dropdown-item">Marco de trabajo</a></li>
+                                <li><a href="#" class="dropdown-item">Analisis estructural</a></li>
+                                <li><a href="#" class="dropdown-item">Orientado a objetos</a></li>
+                                <li><a href="videos.html" class="dropdown-item">Videos</a></li>
+                                <li><a href="#" class="dropdown-item">Casos de uso</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    -->
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container my-5 position-relative">
+        <div class="row">
+            <!-- Sidebar de navegación -->
+            <div class="col-md-4">
+                <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end position-sticky" style="top: 20px;">
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link" href="#marco-teorico">Marco Teórico</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#antecedentes-organizacion">2.1 Antecedentes de la Organización</a>
+                            <a class="nav-link ms-3 my-1" href="#aspectos-organizacionales">2.1.1 Aspectos Organizacionales</a>
+                            <a class="nav-link ms-3 my-1" href="#aspecto-administrativo">2.1.2 Aspecto Administrativo</a>
+                            <a class="nav-link ms-3 my-1" href="#aspecto-tecnico">2.1.3 Aspecto Técnico</a>
+                        </nav>
+                        <a class="nav-link" href="#metodologias">2.2 Metodologías</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#scrum">2.2.1 Metodología SCRUM</a>
+                        </nav>
+                        <a class="nav-link" href="#software">2.3 Software</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#javascript">2.3.1 JavaScript</a>
+                            <a class="nav-link ms-3 my-1" href="#html-css">2.3.2 HTML & CSS</a>
+                        </nav>
+                    </nav>
+                </nav>
+            </div>
+            
+    
+            <!-- Contenido principal -->
+            <div class="col-md-8">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+                    <div id="marco-teorico">
+                        <h1>Marco Teórico</h1>
+                    </div>
+    
+                    <div id="antecedentes-organizacion" class="mt-4">
+                        <h2>2.1 Antecedentes de la Organización</h2>
+                        <p>La plataforma "TechShop Online" surge como respuesta a la creciente demanda de adquirir computadoras y accesorios de manera fácil y rápida a través de internet. Su objetivo es proporcionar una experiencia de compra confiable y eficiente, combinando una amplia oferta de productos con soporte técnico personalizado.</p>
+                    </div>
+    
+                    <div id="aspectos-organizacionales" class="mt-4">
+                        <h3>2.1.1 Aspectos Organizacionales</h3>
+                        <p>La estructura organizacional de "TechShop Online" se basa en una jerarquía que promueve la colaboración y la eficiencia operativa:</p>
+                        <ul>
+                            <li><strong>Dirección:</strong> Encargada de la visión estratégica y toma de decisiones.</li>
+                            <li><strong>Departamento de Ventas:</strong> Responsable de la gestión del catálogo de productos y las relaciones con proveedores.</li>
+                            <li><strong>Departamento Técnico:</strong> Soporte técnico para clientes y mantenimiento de la plataforma.</li>
+                            <li><strong>Departamento de Logística:</strong> Coordinación del envío y entrega de los productos.</li>
+                            <li><strong>Atención al Cliente:</strong> Resolución de dudas, quejas y asesoramiento.</li>
+                        </ul>
+                    </div>
+    
+                    <div id="aspecto-administrativo" class="mt-4">
+                        <h3>2.1.2 Aspecto Administrativo</h3>
+                        <p>Los procesos administrativos incluyen:</p>
+                        <ul>
+                            <li>Gestión del inventario.</li>
+                            <li>Atención al cliente.</li>
+                            <li>Control de pedidos y entregas.</li>
+                            <li>Gestión financiera.</li>
+                        </ul>
+                        <p>Con la implementación del sistema en línea, se busca automatizar estos procesos mediante:</p>
+                        <ul>
+                            <li><strong>Gestión de Inventarios Automatizada:</strong> Control actualizado en tiempo real del stock.</li>
+                            <li><strong>Procesos de Compra y Pago:</strong> Flujo simplificado desde la selección hasta el pago en línea.</li>
+                            <li><strong>Seguimiento de Pedidos:</strong> Información en tiempo real para los clientes.</li>
+                            <li><strong>Análisis de Ventas:</strong> Informes detallados para apoyar decisiones estratégicas.</li>
+                        </ul>
+                    </div>
+    
+                    <div id="aspecto-tecnico" class="mt-4">
+                        <h3>2.1.3 Aspecto Técnico</h3>
+                        <p>Infraestructura Tecnológica:</p>
+                        <ul>
+                            <li><strong>Hardware:</strong> Servidores, equipos para pruebas y desarrollo.</li>
+                            <li><strong>Conectividad:</strong> Internet de alta velocidad y red interna.</li>
+                            <li><strong>Dispositivos:</strong> Impresoras y escáneres.</li>
+                        </ul>
+                        <p>Software:</p>
+                        <ul>
+                            <li><strong>Plataforma de Desarrollo:</strong> HTML, CSS, JavaScript, Python o PHP.</li>
+                            <li><strong>Base de Datos:</strong> MySQL o PostgreSQL.</li>
+                            <li><strong>Seguridad:</strong> Cifrado SSL/TLS y monitoreo continuo.</li>
+                        </ul>
+                    </div>
+    
+                    <div id="metodologias" class="mt-4">
+                        <h2>2.2 Metodologías</h2>
+                    </div>
+    
+                    <div id="scrum" class="mt-4">
+                        <h3>2.2.1 Metodología SCRUM</h3>
+                        <p>SCRUM se implementará para garantizar un enfoque ágil en el desarrollo del sistema.</p>
+                        <p>Fases:</p>
+                        <ul>
+                            <li><strong>Planificación:</strong> Revisión de requisitos y priorización de tareas.</li>
+                            <li><strong>Desarrollo por Sprints:</strong> Entregas parciales funcionales.</li>
+                            <li><strong>Pruebas Continuas:</strong> Verificación de funcionalidades en cada iteración.</li>
+                            <li><strong>Despliegue Incremental:</strong> Implementación progresiva en producción.</li>
+                        </ul>
+                    </div>
+    
+                    <div id="software" class="mt-4">
+                        <h2>2.3 Software</h2>
+                    </div>
+    
+                    <div id="javascript" class="mt-4">
+                        <h3>2.3.1 JavaScript</h3>
+                        <p>Utilizado para la creación de una interfaz dinámica e interactiva, mejora la experiencia del cliente mediante:</p>
+                        <ul>
+                            <li>Validaciones de formularios en tiempo real.</li>
+                            <li>Visualización dinámica del carrito de compras.</li>
+                            <li>Búsqueda y filtrado eficiente de productos.</li>
+                        </ul>
+                    </div>
+    
+                    <div id="html-css" class="mt-4">
+                        <h3>2.3.2 HTML & CSS</h3>
+                        <p><strong>HTML:</strong> Estructura la información de productos, promociones y formularios.</p>
+                        <p><strong>CSS:</strong> Define el diseño visual, adaptándose a dispositivos móviles para mejorar la experiencia del usuario.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer class="bg-dark text-light py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Tienda Omega. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">Acerca de</a>
+                    <a href="#" class="text-light">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		let lastScrollTop = 0;
+		const navbar = document.querySelector('.navbar');
+	
+		window.addEventListener('scroll', function() {
+			const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	
+			if (scrollTop > lastScrollTop) {
+				// Oculta la barra de navegación al hacer scroll hacia abajo
+				navbar.style.top = '-80px'; // Ajusta este valor según la altura de la navbar
+			} else {
+				// Muestra la barra de navegación al hacer scroll hacia arriba
+				navbar.style.top = '0';
+			}
+	
+			lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para evitar valores negativos en el scroll
+		});
+	</script>
+	
+</body>
+</html>
