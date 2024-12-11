@@ -5,91 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Tienda</title>
-	<style>
-		/* Estilo para la barra de navegación */
-		.navbar {
-			position: fixed;
-			top: 0;
-			width: 100%;
-			transition: top 0.3s; /* Añade una transición suave */
-			z-index: 1000; /* Asegura que la navbar esté en el frente */
-		}
-		/* Asegura que el contenido no quede oculto debajo de la navbar */
-		body {
-			padding-top: 80px; /* Ajusta según la altura de la navbar */
-		}
-	</style>
-	
+    <style>
+        /* Estilo para la barra de navegación */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            transition: top 0.3s;
+            z-index: 1000;
+        }
+        body {
+            padding-top: 80px;
+        }
+
+        /* Estilos para la galería de videos */
+        .video-gallery {
+            background-color: #f8f9fa; /* Fondo claro */
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .video-gallery h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        .card {
+            border: none; /* Sin borde */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Efecto de agrandamiento */
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            color: #007bff; /* Azul */
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d; /* Gris */
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a href="#" class="navbar-brand">Tienda Omega</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-                        <li class="nav-item"><a href="marco_teorico.html" class="nav-link">Marco Teorico</a></li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="productDropdown" data-bs-toggle="dropdown">Analisis Estructural</a>
-                            <ul class="dropdown-menu" aria-labelledby="productDropdown">
-                                <li><a href="ma.html" class="dropdown-item">Modelo Ambiental</a></li>
-                                <li><a href="mc.html" class="dropdown-item">Modelo de comportamiento</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="oo.html" class="nav-link">Orientado a Objetos</a></li>
-                        <li class="nav-item"><a href="videos.html" class="nav-link">Videos</a></li>
-                    </ul>
-                    
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand">Tienda Omega</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="marco_teorico.html" class="nav-link">Marco Teorico</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="productDropdown" data-bs-toggle="dropdown">Analisis Estructural</a>
+                        <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                            <li><a href="ma.html" class="dropdown-item">Modelo Ambiental</a></li>
+                            <li><a href="mc.html" class="dropdown-item">Modelo de comportamiento</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="oo.html" class="nav-link">Orientado a Objetos</a></li>
+                    <li class="nav-item"><a href="videos.html" class="nav-link">Videos</a></li>
+                    <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+
+                    <!--
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="productDropdown" data-bs-toggle="dropdown">Productos</a>
+                        <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                            <li><a href="productos.html" class="dropdown-item">Computadoras</a></li>
+                            <li><a href="productos.html" class="dropdown-item">Laptops</a></li>
+                            <li><a href="productos.html" class="dropdown-item">Smartphones</a></li>
+                            <li><a href="productos.html" class="dropdown-item">Drones</a></li>
+                            <li><a href="productos.html" class="dropdown-item">Accesorios</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="productDropdown" data-bs-toggle="dropdown">contenido</a>
+                        <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                            <li><a href="#" class="dropdown-item">Marco de trabajo</a></li>
+                            <li><a href="#" class="dropdown-item">Analisis estructural</a></li>
+                            <li><a href="#" class="dropdown-item">Orientado a objetos</a></li>
+                            <li><a href="videos.html" class="dropdown-item">Videos</a></li>
+                            <li><a href="#" class="dropdown-item">Casos de uso</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                -->
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <!-- Sección de Videos -->
+    <section class="video-gallery py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Videos Destacados</h2>
+            <div class="row g-4">
+                <!-- Video 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <iframe class="card-img-top" width="100%" height="215" src="https://www.youtube.com/embed/sGU3Jke-JaQ?si=Qv2oaxcS0Ac5Vts8" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Video 1</h5>
+                            <p class="card-text">Explora los detalles del primer video de nuestra colección.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <iframe class="card-img-top" width="100%" height="215" src="https://www.youtube.com/embed/TyasEWPNer4?si=7ylGShU4p4eCN-cb" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Video 2</h5>
+                            <p class="card-text">Aprende más con este segundo video destacado.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <iframe class="card-img-top" width="100%" height="215" src="https://www.youtube.com/embed/48THKBsQtYY?si=sp38tzj4zqXvmJsw" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Video 3</h5>
+                            <p class="card-text">Descubre nuevas ideas en este tercer video.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <section class="main">
-        <div class="accordion" id="accordionPanelsStayOpenExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                  Video 1
-                </button>
-              </h2>
-              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                <div class="accordion-body">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/sGU3Jke-JaQ?si=Qv2oaxcS0Ac5Vts8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>             
-
-
-                   
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                  Video 2
-                </button>
-              </h2>
-              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TyasEWPNer4?si=7ylGShU4p4eCN-cb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>               </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                  Video 3
-                </button>
-              </h2>
-              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/48THKBsQtYY?si=sp38tzj4zqXvmJsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>              </div>
-              </div>
-            </div>
-          </div>
+        </div>
     </section>
+
     <footer class="bg-dark text-light py-3">
         <div class="container">
             <div class="row">
@@ -106,24 +172,20 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-	<script>
-		let lastScrollTop = 0;
-		const navbar = document.querySelector('.navbar');
-	
-		window.addEventListener('scroll', function() {
-			const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-	
-			if (scrollTop > lastScrollTop) {
-				// Oculta la barra de navegación al hacer scroll hacia abajo
-				navbar.style.top = '-80px'; // Ajusta este valor según la altura de la navbar
-			} else {
-				// Muestra la barra de navegación al hacer scroll hacia arriba
-				navbar.style.top = '0';
-			}
-	
-			lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para evitar valores negativos en el scroll
-		});
-	</script>
-	
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+    
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+            if (scrollTop > lastScrollTop) {
+                navbar.style.top = '-80px'; // Oculta la barra al bajar
+            } else {
+                navbar.style.top = '0'; // Muestra la barra al subir
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
 </body>
 </html>
